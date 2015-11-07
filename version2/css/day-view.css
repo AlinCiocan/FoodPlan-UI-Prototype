@@ -1,0 +1,36 @@
+.day-view__category {
+  position: relative;
+}
+.day-view__category-delete {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.day-view__category-edit {
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+.day-view__items {
+  position: relative;
+}
+.day-view__item {
+  position: relative;
+  padding-left: 15px;
+}
+.day-view__item:before {
+  content: ">";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.day-view__item-delete {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.day-view__item-edit {
+  position: absolute;
+  top: 0;
+  right: 30px;
+}

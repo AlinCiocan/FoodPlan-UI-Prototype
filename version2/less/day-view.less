@@ -1,0 +1,38 @@
+.day-view {
+    &__category {
+        position: relative;
+    }
+    &__category-delete {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    &__category-edit {
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+    &__items {
+        position: relative;
+    }
+    &__item {
+        position: relative;
+        padding-left: 15px;
+        &:before {
+            content: ">";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__item-delete {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    &__item-edit {
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+}
