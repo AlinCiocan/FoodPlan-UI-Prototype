@@ -1,36 +1,70 @@
+.day-view {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.day-view__day-title {
+  font-size: 28px;
+}
+.day-view__line {
+  margin-top: 0;
+}
 .day-view__category {
   position: relative;
 }
+.day-view__category-title {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
 .day-view__category-delete {
-  position: absolute;
-  top: 0;
-  right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
 }
 .day-view__category-edit {
-  position: absolute;
-  top: 0;
-  right: 30px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
 }
 .day-view__items {
   position: relative;
 }
 .day-view__item {
   position: relative;
-  padding-left: 15px;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-right: 100px;
+  border: 1px solid gray;
+  font-size: 16px;
 }
-.day-view__item:before {
-  content: ">";
-  position: absolute;
-  top: 0;
-  left: 0;
+.day-view__item:hover {
+  background-color: #eee;
 }
 .day-view__item-delete {
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: 2px;
+  right: 0;
+  padding-left: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 40px;
+  width: 40px;
+  height: 38px;
 }
 .day-view__item-edit {
   position: absolute;
-  top: 0;
-  right: 30px;
+  top: 2px;
+  padding-left: 5px;
+  right: 45px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 40px;
+  width: 40px;
+  height: 38px;
+}
+.day-view__add-item {
+  text-align: right;
+}
+.day-view__add-item-button {
+  display: inline-block;
 }

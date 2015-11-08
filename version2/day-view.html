@@ -22,7 +22,7 @@
     <link href="css/day-view.css" rel="stylesheet" />
 </head>
 
-<body>
+<body ng-app="foodplanapp">
 
     <header class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -45,118 +45,54 @@
         </div>
     </header>
 
-    <div class="container week-view">
+    <div class="container week-view" ng-controller="dayViewController">
         <div class="row">
             <div class="week-menu">
-                <span class="glyphicon glyphicon-triangle-bottom"></span> Current week
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                <span class="week-menu__title">Current week </span>
             </div>
         </div>
-        <div class="row day-view">
+        <div class="row day-view" ng-repeat="day in week.days">
             <div class="day-view__day-title">
-                Tuesday
+                {{day.title}}
             </div>
+            <hr class="day-view__line" />
 
-            <div class="day-view__category">
-                <div class="day-view__category-title">Morning</div>
-                <div class="day-view__category-delete">
-                    D
-                </div>
+            <div class="day-view__category" ng-repeat="category in day.categories">
+                <div class="day-view__category-title">{{category.title}}</div>
 
-                <div class="day-view__category-edit">
-                    E
-                </div>
+                <div class="day-view__category-delete glyphicon glyphicon-trash"></div>
+                <div class="day-view__category-edit glyphicon glyphicon-pencil"></div>
 
 
-                <div class="day-view__items">
-                    <div class="day-view__item">
+                <ul class="day-view__items list-group">
+                    <li class="day-view__item list-group-item" ng-repeat="item in category.items">
                         <div class="day-view__item-title">
-                            eggs
+                            {{item}}
                         </div>
 
-                        <div class="day-view__item-delete">
-                            D
-                        </div>
+                        <div class="day-view__item-delete glyphicon glyphicon-trash"></div>
+                        <div class="day-view__item-edit glyphicon glyphicon-pencil"></div>
+                    </li>
 
-                        <div class="day-view__item-edit">
-                            E
-                        </div>
-                    </div>
-
-                    <div class="day-view__item">
-                        <div class="day-view__item-title">
-                            eggs
-                        </div>
-
-                        <div class="day-view__item-delete">
-                            D
-                        </div>
-
-                        <div class="day-view__item-edit">
-                            E
-                        </div>
-                    </div>
-
+                </ul>
+                <div class="day-view__add-item">
+                    <button class="day-view__add-item btn btn-default">+Add item</button>
                 </div>
-
-                <div class="day-view__add-item">+Add item</div>
 
             </div>
 
-            <div class="day-view__category">
-                <div class="day-view__category-title">Lunch</div>
-                <div class="day-view__category-delete">
-                    D
-                </div>
-
-                <div class="day-view__category-edit">
-                    E
-                </div>
-
-
-                <div class="day-view__items">
-                    <div class="day-view__item">
-                        <div class="day-view__item-title">
-                            fruits
-                        </div>
-
-                        <div class="day-view__item-delete">
-                            D
-                        </div>
-
-                        <div class="day-view__item-edit">
-                            E
-                        </div>
-                    </div>
-
-                    <div class="day-view__item">
-                        <div class="day-view__item-title">
-                            soup
-                        </div>
-
-                        <div class="day-view__item-delete">
-                            D
-                        </div>
-
-                        <div class="day-view__item-edit">
-                            E
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="day-view__add-item">+Add item</div>
-
-            </div>
-
-            <div class="day-view__add-category">
+            <button class="day-view__add-category btn btn-default">
                 +Add category
-            </div>
+            </button>
 
         </div>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/day-view.js"></script>
 </body>
 
 </html>

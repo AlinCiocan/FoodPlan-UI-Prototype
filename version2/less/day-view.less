@@ -1,38 +1,71 @@
 .day-view {
+    margin-left: 0px;
+    margin-right: 0px;
+    &__day-title {
+        font-size: 28px;
+    }
+    &__line {
+        margin-top: 0;
+    }
     &__category {
         position: relative;
     }
+    &__category-title {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
     &__category-delete {
-        position: absolute;
-        top: 0;
-        right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 20px;
     }
     &__category-edit {
-        position: absolute;
-        top: 0;
-        right: 30px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 20px;
     }
     &__items {
         position: relative;
     }
     &__item {
         position: relative;
-        padding-left: 15px;
-        &:before {
-            content: ">";
-            position: absolute;
-            top: 0;
-            left: 0;
+        padding-left: 5px;
+        padding-top: 10px;
+        padding-right: 100px;
+        border: 1px solid gray;
+        font-size: 16px;
+        &:hover {
+            background-color: #eee;
         }
     }
     &__item-delete {
         position: absolute;
-        top: 0;
-        right: 10px;
+        top: 2px;
+        right: 0;
+        padding-left: 5px;
+        cursor: pointer;
+        font-size: 24px;
+        font-size: 24px;
+        line-height: 40px;
+        width: 40px;
+        height: 38px;
     }
     &__item-edit {
         position: absolute;
-        top: 0;
-        right: 30px;
+        top: 2px;
+        padding-left: 5px;
+        right: 45px;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 40px;
+        width: 40px;
+        height: 38px;
+    }
+    &__add-item {
+        text-align: right;
+    }
+    &__add-item-button {
+        display: inline-block;
     }
 }
