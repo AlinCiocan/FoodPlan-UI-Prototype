@@ -1,4 +1,4 @@
-/*global angular*/
+/*global angular, $*/
 
 var foodplanapp = angular.module("foodplanapp", []);
 foodplanapp.controller("dayViewController", ["$scope", function ($scope) {
@@ -80,9 +80,32 @@ foodplanapp.controller("dayViewController", ["$scope", function ($scope) {
 
 
 
-    week.days = [week.days[0]]; // only Monday 
+    //week.days = [week.days[0]]; // only Monday 
 
     $scope.week = week;
 
 
 }]);
+
+
+
+setTimeout(function () {
+    var owl = $(".days-carousel");
+
+    owl.owlCarousel({
+        items: 4, //10 items above 1000px browser width
+        itemsDesktop: [1000, 3], //5 items between 1000px and 901px
+        itemsDesktopSmall: [768, 2], //[900, 3], // betweem 900px and 601px
+        itemsTablet: false, //[600, 1], //2 items between 600 and 0
+        itemsMobile: [600, 1] // itemsMobile disabled - inherit from itemsTablet option
+    });
+
+    // Custom Navigation Events
+    $(".next").click(function () {
+        owl.trigger('owl.next');
+    });
+    $(".prev").click(function () {
+        owl.trigger('owl.prev');
+    });
+
+}, 1000);

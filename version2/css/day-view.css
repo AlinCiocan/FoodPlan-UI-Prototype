@@ -1,6 +1,6 @@
 .day-view {
   margin-left: 0px;
-  margin-right: 0px;
+  margin-right: 20px;
 }
 .day-view__day-title {
   font-size: 28px;
@@ -34,11 +34,10 @@
   padding-left: 5px;
   padding-top: 10px;
   padding-right: 100px;
-  border: 1px solid gray;
   font-size: 16px;
 }
 .day-view__item:hover {
-  background-color: #eee;
+  background-color: #e6e6e6;
 }
 .day-view__item-delete {
   position: absolute;
