@@ -5,6 +5,10 @@ foodplanapp.controller("dayViewController", ["$scope", function ($scope) {
     "use strict";
 
 
+    $scope.show = function (msg) {
+        alert("You clicked: " + msg);
+    };
+
     function category(title, items) {
         return {
             title: title,
@@ -94,10 +98,10 @@ setTimeout(function () {
 
     owl.owlCarousel({
         items: 4, //10 items above 1000px browser width
-        itemsDesktop: [1000, 3], //5 items between 1000px and 901px
-        itemsDesktopSmall: [768, 2], //[900, 3], // betweem 900px and 601px
+        itemsDesktop: [1200, 3], //5 items between 1000px and 901px
+        itemsDesktopSmall: [1000, 2], //[900, 3], // betweem 900px and 601px
         itemsTablet: false, //[600, 1], //2 items between 600 and 0
-        itemsMobile: [600, 1] // itemsMobile disabled - inherit from itemsTablet option
+        itemsMobile: [750, 1] // itemsMobile disabled - inherit from itemsTablet option
     });
 
     // Custom Navigation Events

@@ -20,11 +20,17 @@
   display: inline-block;
   cursor: pointer;
   font-size: 20px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
 }
 .day-view__category-edit {
   display: inline-block;
   cursor: pointer;
   font-size: 20px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
 }
 .day-view__items {
   position: relative;
@@ -49,6 +55,9 @@
   line-height: 40px;
   width: 40px;
   height: 38px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
 }
 .day-view__item-edit {
   position: absolute;
@@ -60,6 +69,9 @@
   line-height: 40px;
   width: 40px;
   height: 38px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
 }
 .day-view__add-item {
   text-align: right;

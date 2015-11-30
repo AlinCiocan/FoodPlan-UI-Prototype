@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,6 +26,19 @@
 </head>
 
 <body ng-app="foodplanapp">
+    <script>
+        // Copyright 2014-2015 Twitter, Inc.
+        // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.querySelector('head').appendChild(msViewportStyle)
+        }
+    </script>
 
     <header class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -65,20 +78,19 @@
                 <div class="day-view__category" ng-repeat="category in day.categories">
                     <div class="day-view__category-title">{{category.title}}</div>
 
-                    <div class="day-view__category-delete glyphicon glyphicon-trash"></div>
-                    <div class="day-view__category-edit glyphicon glyphicon-pencil"></div>
+                    <button class="day-view__category-delete glyphicon glyphicon-trash" ng-click="show('recycle category')"></button>
+                    <button class="day-view__category-edit glyphicon glyphicon-pencil" ng-click="show('pencil category')"></button>
 
 
                     <ul class="day-view__items list-group">
-                        <li class="day-view__item list-group-item" ng-repeat="item in category.items">
+                        <li class="day-view__item list-group-item" ng-repeat="item in category.items" ng-click="show('you clicked on ' + item)">
                             <div class="day-view__item-title">
                                 {{item}}
                             </div>
 
-                            <div class="day-view__item-delete glyphicon glyphicon-trash"></div>
-                            <div class="day-view__item-edit glyphicon glyphicon-pencil"></div>
+                            <div class="day-view__item-delete glyphicon glyphicon-trash" ng-click="show('recycle'); $event.stopPropagation();"></div>
+                            <div class="day-view__item-edit glyphicon glyphicon-pencil" ng-click="show('pencil button'); $event.stopPropagation();"></div>
                         </li>
-
                     </ul>
                     <div class="day-view__add-item">
                         <button class="day-view__add-item btn btn-default">+Add item</button>
