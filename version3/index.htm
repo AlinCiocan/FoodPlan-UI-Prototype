@@ -4,19 +4,53 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title> FoodPlan UI	</title>
+	<title> FoodPlan UI </title>
+	<link rel="stylesheet" href="css/vendor/normalize.css">
 	<link rel="stylesheet" href="css/week-layout.css">
 </head>
 
 <body ng-app="foodplan">
-	FoodPlan UI version {{1+2}} !
-	
-	<div class="week" ng-controller="WeekController">
-		
+
+
+	<header class="site-header">
+		<a href="#" class="site-logo">
+			<img src="img/foodplan-logo.png" class="site-logo__img" />
+		</a>
+
+		<input type="image" src="img/menu-icon.png" class="site-menu" />
+		<!--
+		<nav class="site-navigation">
+			<ul>
+				<li class="site-navigation__item"><a href="#"> Home </a></li>
+				<li class="site-navigation__item"><a href="#"> About </a></li>
+				<li class="site-navigation__item"><a href="#"> Recipes </a></li>
+				<li class="site-navigation__item"><a href="#"> Contact </a></li>
+			</ul>
+		</nav>
+		-->
+	</header>
+
+
+	<div class="week-navigation" ng-controller="WeekController">
+		<div class="days-navigation">
+			<div class="days-navigation__header"> Current week </div>
+			<div 
+				class="days-navigation__circle" 
+				ng-repeat="day in week.days" 
+				ng-class="currentDay.name == day.name? 'days-navigation__circle--active days-navigation__circle--' + day.name : 'days-navigation__circle--' + day.name"
+				ng-click="changeDay(day)">
+			</div>
+		</div>
+
+
+		<div class="day-view" ng-repeat="day in week.days">
+		</div>
+
 	</div>
-	
-	
+
+
 	<script src="js/vendor/angular.min.js"></script>
+	<script src="js/model.js"></script>
 	<script src="js/app.js"></script>
 </body>
 

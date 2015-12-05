@@ -5,8 +5,10 @@
 		// populate the model
 		$scope.week = window.week;
 		
+		$scope.currentDay = $scope.week.days[0];
 		
-		
-		
+		$scope.changeDay = function (day) {
+			$scope.currentDay = day;
+		};
 	}]);
 })();

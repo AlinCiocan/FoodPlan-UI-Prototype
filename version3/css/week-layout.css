@@ -1,0 +1,35 @@
+.site-logo {
+  text-decoration: none; }
+
+.site-menu {
+  float: right; }
+
+.days-navigation {
+  text-align: center; }
+  .days-navigation__header {
+    font-size: 22px;
+    color: #b8cab0; }
+  .days-navigation__circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: yellowgreen;
+    display: inline-block;
+    margin: 12px; }
+    .days-navigation__circle--active {
+      border: 2px solid #E1E1E3;
+      margin-bottom: 10px; }
+    .days-navigation__circle--monday {
+      background-color: #FFD900; }
+    .days-navigation__circle--tuesday {
+      background-color: #29A889; }
+    .days-navigation__circle--wednesday {
+      background-color: #DE59A4; }
+    .days-navigation__circle--thursday {
+      background-color: #F4ACCC; }
+    .days-navigation__circle--friday {
+      background-color: #00CCD6; }
+    .days-navigation__circle--saturday {
+      background-color: #F5989D; }
+    .days-navigation__circle--sunday {
+      background-color: #7CC576; }
