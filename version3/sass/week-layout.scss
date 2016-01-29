@@ -1,58 +1,10 @@
-$dayPrimaryColors: (
-	monday: #FFD900,
-	tuesday: #29A889,
-	wednesday: #DE59A4,
-	thursday: #F4ACCC,
-	friday: #00CCD6,
-	saturday: #F5989D,
-	sunday: #7CC576 
-);
-
-.site-logo {
-	text-decoration: none;
-}
-
-.site-menu {
-	float: right;
-}
+@import "header";
+@import "colors";
+@import "days-navigation";
+@import "day-view";
 
 
-.days-navigation {
-	text-align: center;
-	
-	&__header {
-		font-size: 22px;
-		color: rgb(184, 202, 176);
-	}
-	
-	&__circle {
-		$circleDiameter: 15px;
-		$circleMargin: 12px;
-		
-		width: $circleDiameter;
-		height: $circleDiameter;
-		border-radius: $circleDiameter;
-		background-color: yellowgreen;
-		display: inline-block;
-		margin: $circleMargin;
-		
-		&--active {
-			$circleBorder: 2px;
-			
-			border: $circleBorder solid #E1E1E3;
-			margin-bottom: $circleMargin - $circleBorder;
-		}
-		
-		@each $day, $dayColor in $dayPrimaryColors {
-			&--#{$day} {
-				background-color: $dayColor;
-			}
-		}
-		
-		
-	}
 
-	
-}
+
 
 

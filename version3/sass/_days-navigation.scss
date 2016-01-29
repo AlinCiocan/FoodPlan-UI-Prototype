@@ -1,0 +1,38 @@
+.days-navigation {
+	text-align: center;
+	
+	&__header {
+		font-size: 22px;
+		color: rgb(184, 202, 176);
+	}
+	
+	&__circle {
+		$circleDiameter: 15px;
+		$circleMargin: 15px;
+		
+		outline: none;
+		border: none;
+		
+		width: $circleDiameter;
+		height: $circleDiameter;
+		border-radius: $circleDiameter;
+		background-color: yellowgreen;
+		display: inline-block;
+		margin: $circleMargin;
+		
+		&--active {
+			$circleBorder: 2px;
+			
+			border: $circleBorder solid #E1E1E3;
+			margin-bottom: $circleMargin;
+		}
+		
+		@each $day, $dayColor in $dayPrimaryColors {
+			&--#{$day} {
+				background-color: $dayColor;
+			}
+		}
+		
+		
+	}	
+}

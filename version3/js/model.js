@@ -21,13 +21,13 @@
 
 	var week = {
 		days: [
-			createDay("Monday", [breakfast, lunch, dinner]),
-			createDay("Tuesday", [lunch, shopping, dinner, cooking]),
-			createDay("Wednesday", [breakfast, lunch, shopping, cooking]),
-			createDay("Thursday", [breakfast, lunch, shopping, dinner, cooking]),
-			createDay("Friday", [breakfast, lunch, dinner]),
-			createDay("Saturday", [lunch, shopping, dinner, cooking]),
-			createDay("Sunday", [breakfast, lunch, shopping, cooking]),
+			createDay("monday", [breakfast, lunch, dinner]),
+			createDay("tuesday", [lunch, shopping, dinner, cooking]),
+			createDay("wednesday", [breakfast, lunch, shopping, cooking]),
+			createDay("thursday", [breakfast, lunch, shopping, dinner, cooking]),
+			createDay("friday", [breakfast, lunch, dinner]),
+			createDay("saturday", [lunch, shopping, dinner, cooking]),
+			createDay("sunday", [breakfast, lunch, shopping, cooking]),
 		]
 	};
 

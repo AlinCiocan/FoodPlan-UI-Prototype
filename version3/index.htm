@@ -34,16 +34,30 @@
 	<div class="week-navigation" ng-controller="WeekController">
 		<div class="days-navigation">
 			<div class="days-navigation__header"> Current week </div>
-			<div 
+			
+			<!-- Change this to use a button and inside of the button use a span-->
+			<a 
 				class="days-navigation__circle" 
 				ng-repeat="day in week.days" 
 				ng-class="currentDay.name == day.name? 'days-navigation__circle--active days-navigation__circle--' + day.name : 'days-navigation__circle--' + day.name"
 				ng-click="changeDay(day)">
-			</div>
+			</a>
 		</div>
 
 
-		<div class="day-view" ng-repeat="day in week.days">
+		<div 
+			class="day-view" 
+			ng-repeat="day in week.days" 
+			ng-class="currentDay.name == day.name? 'day-view--active day-view--' + day.name : 'day-view--' + day.name">
+			<div class="day-view__header">
+				<span class="day-view__header-title">
+					{{day.name}}
+				</span>
+				<div class="day-view__actions">
+					<input type="image" src="img/edit-icon.png" class="day-view__day-action"/>					
+					<input type="image" src="img/bin-icon.png" class="day-view__day-action"/>
+				</div>
+			</div>
 		</div>
 
 	</div>

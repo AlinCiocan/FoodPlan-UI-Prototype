@@ -1,0 +1,36 @@
+.day-view {
+	display: none;
+	//border: 1px dotted black;
+
+	$parent: #{&};
+
+	&--active {
+		display: block;
+	}
+	
+	
+	@each $day, $dayColor in $daySecondaryColors {
+		&--#{$day} {
+			
+			#{$parent}__header-title {
+				color: $dayColor;			
+			}
+		}	
+	}
+	
+		
+	&__actions {
+		float: right;
+	}	
+		
+	&__day-action {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		padding: 10px;
+	}
+	
+}
+
+
+
