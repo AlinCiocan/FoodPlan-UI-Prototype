@@ -1,7 +1,44 @@
+@import "base";
 @import "header";
-@import "colors";
 
 
 
 
 
+.week-menu {
+    padding: 10px;
+    
+    &__icon {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        vertical-align: sub;
+        padding-right: 2px;
+    }
+    
+    &__week {
+        display: inline-block;
+        font-size: 25px;
+    }
+    
+    &__dates {
+        font-size: 18px;
+    }
+}
+
+
+.day-navigation {
+    
+    &__previous-day {
+        float: left;
+    }
+    
+    &__next-day {
+        float: right;
+    }
+    
+    &__day-title {
+        text-transform: capitalize;
+        float: left;
+    }
+}
