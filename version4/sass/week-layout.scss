@@ -19,6 +19,7 @@
     &__week {
         display: inline-block;
         font-size: 25px;
+        color: $darkGray;
     }
     
     &__dates {
@@ -28,17 +29,60 @@
 
 
 .day-navigation {
+    color: $darkGray;
+    
+    &__header {
+        text-align: center;
+        font-size: 30px;
+    }
     
     &__previous-day {
+        @include reset-button-style;
         float: left;
     }
     
     &__next-day {
+        @include reset-button-style;
+        float: right;
+    }
+
+    &__day-title {
+        text-transform: capitalize;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    &__category {
+        border-radius: 3px;
+        background-color: $lightGray;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    
+    &__edit-category {
+        @include reset-button-style;
+        font-size: 20px;
         float: right;
     }
     
-    &__day-title {
+    &__category-title {
         text-transform: capitalize;
-        float: left;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    
+    &__item {
+        border-radius: 3px;
+        background-color: white;
+        border-bottom: 1px solid $mediumGray;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
     }
 }

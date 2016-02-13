@@ -39,11 +39,24 @@
 
     <div class="week-navigation" ng-controller="WeekController">
         <div ng-repeat="day in week.days" class="day-navigation" ng-show="day.name == currentDay.name">
-            <button class="day-navigation__previous-day glyphicon glyphicon-chevron-left"></button>
-            <div class="day-navigation__day-title">
-                {{day.name}}
+            <div class="day-navigation__header">
+                <button class="day-navigation__previous-day glyphicon glyphicon-chevron-left"></button>
+                <div class="day-navigation__day-title">
+                    {{day.name}}
+                </div>
+                <button class="day-navigation__next-day glyphicon glyphicon-chevron-right"></button>
             </div>
-            <button class="day-navigation__previous-day glyphicon glyphicon-chevron-right"></button>
+
+
+            <div class="day-navigation__category" ng-repeat="category in day.categories">
+                <div class="day-navigation__category-header">
+                    <button class="day-navigation__edit-category glyphicon glyphicon-edit" ng-click="alert('edit category')"></button>
+                </div>
+                <div class="day-navigation__category-title">{{category.name}}</div>
+                
+                <div class="day-navigation__item" ng-repeat="item in category.items" ng-click="alert('edit item')">{{item}}</div>
+            </div>
+
         </div>
     </div>
 

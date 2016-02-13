@@ -819,16 +819,56 @@
     padding-right: 2px; }
   .week-menu__week {
     display: inline-block;
-    font-size: 25px; }
+    font-size: 25px;
+    color: #4d4d4d; }
   .week-menu__dates {
     font-size: 18px; }
 
-.day-navigation__previous-day {
-  float: left; }
-.day-navigation__next-day {
-  float: right; }
-.day-navigation__day-title {
-  text-transform: capitalize;
-  float: left; }
+.day-navigation {
+  color: #4d4d4d; }
+  .day-navigation__header {
+    text-align: center;
+    font-size: 30px; }
+  .day-navigation__previous-day {
+    background: transparent;
+    border: none;
+    outline: none;
+    float: left; }
+  .day-navigation__next-day {
+    background: transparent;
+    border: none;
+    outline: none;
+    float: right; }
+  .day-navigation__day-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    display: inline-block; }
+  .day-navigation__category {
+    border-radius: 3px;
+    background-color: #e2e4e6;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px; }
+  .day-navigation__edit-category {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    float: right; }
+  .day-navigation__category-title {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold; }
+  .day-navigation__item {
+    border-radius: 3px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px; }
 
 /*# sourceMappingURL=week-layout.css.map */
