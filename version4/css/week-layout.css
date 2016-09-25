@@ -810,13 +810,17 @@
   float: right; }
 
 .week-menu {
-  padding: 10px; }
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none; }
   .week-menu__icon {
     width: 35px;
     height: 35px;
     display: inline-block;
     vertical-align: sub;
-    padding-right: 2px; }
+    padding-right: 2px;
+    fill: #4d4d4d; }
   .week-menu__week {
     display: inline-block;
     font-size: 25px;
@@ -824,21 +828,26 @@
   .week-menu__dates {
     font-size: 18px; }
 
+.week-navigation {
+  color: #4d4d4d;
+  position: relative; }
+  .week-navigation__previous-day, .week-navigation__next-day {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    z-index: 10;
+    font-size: 30px; }
+  .week-navigation__previous-day {
+    left: 0; }
+  .week-navigation__next-day {
+    right: 0; }
+
 .day-navigation {
   color: #4d4d4d; }
   .day-navigation__header {
     text-align: center;
     font-size: 30px; }
-  .day-navigation__previous-day {
-    background: transparent;
-    border: none;
-    outline: none;
-    float: left; }
-  .day-navigation__next-day {
-    background: transparent;
-    border: none;
-    outline: none;
-    float: right; }
   .day-navigation__day-title {
     text-transform: capitalize;
     font-weight: bold;
@@ -870,5 +879,20 @@
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 5px; }
+  .day-navigation__add-new-item {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    height: 10px; }
+  .day-navigation__new-item-line {
+    position: relative; }
+  .day-navigation__new-item-icon {
+    position: relative;
+    background-color: #e2e4e6;
+    top: -19px;
+    left: 50%;
+    margin-left: -10px;
+    font-size: 20px; }
 
 /*# sourceMappingURL=week-layout.css.map */

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title> FoodPlan UI </title>
     <link rel="stylesheet" href="css/vendor/normalize.css">
+    <!-- Owl carousel css -->
+    <link rel="stylesheet" href="css/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="css/vendor/owl-carousel/owl.transitions.css">
+    <!-- Pick a date css -->
+    <link rel="stylesheet" href="css/vendor/pickadate/classic.css">
+    <link rel="stylesheet" href="css/vendor/pickadate/classic.date.css">
+    <!-- Custom css -->
     <link rel="stylesheet" href="css/week-layout.css">
 </head>
 
@@ -29,39 +36,65 @@
 		-->
     </header>
 
-    <div class="week-menu">
-        <img class="week-menu__icon" src="./img/calendar-icon.svg" />
+
+    <button class="week-menu" ng-controller="WeekMenuController" ng-click="changeWeek()">
+        
+        <svg class="week-menu__icon">
+            <use xlink:href="./img/calendar-icon.svg#calendar-svg"></use>
+        </svg>
         <h1 class="week-menu__week"> 
             Week 27 
          </h1>
         <span class="week-menu__dates"> (10 Sep - 17 Sep)</span>
-    </div>
+    </button>
+
+    <!-- Used by pickadate.js -->
+    <input type="text" id="week-menu__datepicker"/>
+
+
 
     <div class="week-navigation" ng-controller="WeekController">
-        <div ng-repeat="day in week.days" class="day-navigation" ng-show="day.name == currentDay.name">
-            <div class="day-navigation__header">
-                <button class="day-navigation__previous-day glyphicon glyphicon-chevron-left"></button>
-                <div class="day-navigation__day-title">
-                    {{day.name}}
+        <button class="week-navigation__previous-day glyphicon glyphicon-chevron-left"></button>
+        <button class="week-navigation__next-day glyphicon glyphicon-chevron-right"></button>
+        
+        <div class="days-carousel owl-carousel">
+            <div ng-repeat="day in week.days" class="day-navigation">
+                <div class="day-navigation__header">
+                    <div class="day-navigation__day-title">
+                        {{day.name}}
+                    </div>
                 </div>
-                <button class="day-navigation__next-day glyphicon glyphicon-chevron-right"></button>
-            </div>
 
-
-            <div class="day-navigation__category" ng-repeat="category in day.categories">
-                <div class="day-navigation__category-header">
-                    <button class="day-navigation__edit-category glyphicon glyphicon-edit" ng-click="alert('edit category')"></button>
+                <div class="day-navigation__category" ng-repeat="category in day.categories">
+                    <div class="day-navigation__category-header">
+                        <button class="day-navigation__edit-category glyphicon glyphicon-edit" ng-click="show('edit category')"></button>
+                    </div>
+                    <div class="day-navigation__category-title">{{category.name}}</div>
+                    <div class="day-navigation__item" ng-repeat="item in category.items" ng-click="show('edit item')">
+                        {{item}}
+                    </div>
+                    
+                    <div class="day-navigation__add-new-item">  
+                        <hr class="day-navigation__new-item-line" />
+                        <span class="day-navigation__new-item-icon glyphicon glyphicon-plus-sign" ng-click="show('add new item')"></span>
+                    </div>
+                    
                 </div>
-                <div class="day-navigation__category-title">{{category.name}}</div>
-                
-                <div class="day-navigation__item" ng-repeat="item in category.items" ng-click="alert('edit item')">{{item}}</div>
             </div>
-
         </div>
+
+
     </div>
 
 
     <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/jquery2.min.js"></script>
+    <!-- Owl carousel library -->
+    <script src="js/vendor/owl.carousel.js"></script>
+    <!-- Pick a date library -->
+    <script src="js/vendor/pickadate/picker.js"></script>
+    <script src="js/vendor/pickadate/picker.date.js"></script>
+
     <script src="js/model.js"></script>
     <script src="js/app.js"></script>
 </body>

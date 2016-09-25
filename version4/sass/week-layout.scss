@@ -7,6 +7,7 @@
 
 .week-menu {
     padding: 10px;
+    @include reset-button-style;
     
     &__icon {
         width: 35px;
@@ -14,6 +15,7 @@
         display: inline-block;
         vertical-align: sub;
         padding-right: 2px;
+        fill: $darkGray;
     }
     
     &__week {
@@ -28,22 +30,34 @@
 }
 
 
+.week-navigation {
+    color: $darkGray;
+    position: relative;
+    
+    &__previous-day,
+    &__next-day  {
+        @include reset-button-style;
+        position: absolute;
+        z-index: 10;
+        font-size: 30px;
+    }
+
+    &__previous-day {
+        left: 0;
+    }
+    
+    &__next-day {
+        right: 0;
+    }
+}
+
+
 .day-navigation {
     color: $darkGray;
     
     &__header {
         text-align: center;
         font-size: 30px;
-    }
-    
-    &__previous-day {
-        @include reset-button-style;
-        float: left;
-    }
-    
-    &__next-day {
-        @include reset-button-style;
-        float: right;
     }
 
     &__day-title {
@@ -85,4 +99,26 @@
         margin-bottom: 10px;
         padding: 5px;
     }
+    
+    &__add-new-item {
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        height: 10px;
+    }
+    
+    &__new-item-line {
+        position: relative;
+    }
+    
+    &__new-item-icon {
+        position: relative;
+        background-color: $lightGray;
+        top: -19px;
+        left: 50%;
+        margin-left: -10px;
+        font-size: 20px;
+    }
+    
 }
